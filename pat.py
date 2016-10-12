@@ -78,6 +78,9 @@ class Core:
         self._start(commands, websites, folder_name, file_name)
 
 class Main:
+    def __init__(self, utilities):
+        self.utilities = utilities
+        
     def _usage(self):
         print("Penetest Automation Tool")
         print(self.utilities.seperator_single_line)
@@ -120,7 +123,7 @@ class Main:
         return args
         
     def start(self):
-        args = self._initialze_arguments()
+        args = self._initialize_arguments()
         core = Core(args.company, self.utilities)
         self._print_banner(args.company)
         self._process_arguments(args, core)
