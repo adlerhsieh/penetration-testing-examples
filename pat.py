@@ -127,5 +127,5 @@ class Main:
 
 if __name__ == '__main__':
     utilities = Utilities()
-    main = Main(utilties)
+    main = Main(utilities)
     main.start()
