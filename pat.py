@@ -104,6 +104,8 @@ class Main:
             core.pen_test('files', self.utilities.reconnaissance_category)
         if args.websearch_test:
             core.pen_test('websearch', self.utilities.reconnaissance_category)
+        if args.test_test:
+            core.pen_test('test', self.utilities.reconnaissance_category)
 
     def _initialize_arguments(self):
         parser = argparse.ArgumentParser('A Tool')
@@ -114,6 +116,7 @@ class Main:
         parser.add_argument("-socialmedia", "--socialmedia_test", help="Social Media Search", action="store_true")
         parser.add_argument("-files", "--files_test", help="Look for juicy files", action="store_true")
         parser.add_argument("-websearch", "--websearch_test", help="Search engine search", action="store_true")
+        parser.add_argument("-test", "--test_test", help="Testing this tool is functioning", action="store_true")
 
         args = parser.parse_args()
 
